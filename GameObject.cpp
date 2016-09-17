@@ -17,25 +17,25 @@ GameObject::~GameObject()
 
 char symbol()
 {
-    return mSymbol;
+    return _symbol;
 }
 
 int x()
 {
-    return mX;
+    return _x;
 }
 
 int y()
 {
-    return mY;
+    return _y;
 }
 
 void x(int x)
 {
-    mX = x;
+    _x = x;
 }
 
 void y(int y)
 {
-    mY = y;
+    _y = y;
 }

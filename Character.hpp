@@ -1,7 +1,7 @@
 //Character.hpp
 
-#ifndef __CHARACTER_H__
-#define __CHARACTER_H__
+#ifndef __CHARACTER_HPP__
+#define __CHARACTER_HPP__
 
 class Character : public GameObject
 {
@@ -10,3 +10,5 @@ public:
     Character();
     ~Character();
 }
+
+#endif

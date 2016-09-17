@@ -6,9 +6,9 @@
 class GameObject
 {
 protected:
-    char mSymbol;
-    int mX;
-    int mY;
+    char _symbol;
+    int _x;
+    int _y;
 
 public:
     GameObject(int x, int y);
@@ -24,3 +24,5 @@ public:
     void x(int x);
     void y(int y);
 }
+
+#endif
