@@ -9,6 +9,8 @@ class Character : public GameObject
 public:
     Character();
     ~Character();
+protected:
+    bool _isHidden;
 }
 
 #endif
