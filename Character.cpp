@@ -13,3 +13,13 @@ Character::~Character()
 {
 
 }
+
+bool Character::isHidden()
+{
+    return _isHidden;
+}
+
+void Character::isHidden(bool val)
+{
+    _isHidden = val;
+}
