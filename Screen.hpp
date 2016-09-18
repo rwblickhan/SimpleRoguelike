@@ -11,7 +11,7 @@ private:
 public:
     Screen();
     ~Screen();
-    void add(const char* msg);
+    void print(const char* msg);
     int height();
     int width();
 }

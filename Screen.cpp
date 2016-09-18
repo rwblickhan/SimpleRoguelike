@@ -16,7 +16,7 @@ Screen::~Screen()
     endwin();
 }
 
-void Screen::add(const char* msg)
+void Screen::print(const char* msg)
 {
     printw(msg);
 }
