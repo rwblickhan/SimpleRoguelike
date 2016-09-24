@@ -18,7 +18,7 @@ character: $(CHARDEPS)
 Character.o:
 	$(CC) $(CFLAGS) GameObject/Character.cpp
 
-PlayerCharacter.o: PlayerCharacter.cpp
+PlayerCharacter.o:
 	$(CC) $(CFLAGS) GameObject/PlayerCharacter.cpp
 
 tile: $(TILEDEPS)
