@@ -1,4 +1,4 @@
-#include <ncurses>
+#include <ncurses.h>
 
 #ifndef __SCREEN_H__
 #define __SCREEN_H__
@@ -14,6 +14,6 @@ public:
     void print(const char* msg);
     int height();
     int width();
-}
+};
 
 #endif

@@ -1,4 +1,5 @@
 // WaterTile.hpp
+// model for tile that represents water
 
 #ifndef __WATER_TILE_HPP__
 #define __WATER_TILE_HPP__

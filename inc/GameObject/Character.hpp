@@ -1,4 +1,6 @@
-//Character.hpp
+// Character.hpp
+// model for a generic character in the game
+// TODO: make abstract
 
 #ifndef __CHARACTER_HPP__
 #define __CHARACTER_HPP__

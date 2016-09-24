@@ -1,4 +1,5 @@
 // PlayerCharacter.hpp
+// model for player character
 
 #ifndef __PLAYER_CHARACTER_HPP__
 #define __PLAYER_CHARACTER_HPP__
