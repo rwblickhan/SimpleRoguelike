@@ -1,10 +1,9 @@
 // WallTile.cpp
 
-#include "WallTile.hpp"
+#include "../inc/GameObject/WallTile.hpp"
 
 WallTile::WallTile(int x, int y)
-    : Tile(x, y)
-    , mSymbol('#')
+    : Tile(x, y, '#')
 {
 
 }

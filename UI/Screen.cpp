@@ -1,4 +1,4 @@
-#include "inc/Screen.hpp"
+#include "../inc/UI/Screen.hpp"
 
 Screen::Screen()
 {

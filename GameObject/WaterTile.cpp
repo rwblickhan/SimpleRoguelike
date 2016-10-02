@@ -1,10 +1,9 @@
 // WaterTile.cpp
 
-#include "WaterTile.hpp"
+#include "../inc/GameObject/WaterTile.hpp"
 
 WaterTile::WaterTile(int x, int y)
-    : Tile(x, y)
-    , mSymbol('~')
+    : Tile(x, y, '~')
 {
 
 }

@@ -41,4 +41,4 @@ Screen.o:
 	$(CC) $(CFLAGS) UI/Screen.cpp
 
 clean:
-	rm *.o make
+	rm *.o
