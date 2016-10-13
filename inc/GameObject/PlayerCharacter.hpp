@@ -8,6 +8,7 @@
 
 class PlayerCharacter : public Character
 {
+public:
     PlayerCharacter(int x, int y);
     ~PlayerCharacter();
 };
