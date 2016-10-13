@@ -1,25 +1,28 @@
-#include "GameWorld.hpp"
+#include "inc/GameWorld.hpp"
+#include "inc/GameObject/GameObject.hpp"
 
-GameWorld::GameWorld()
-    : _gameMap(2*_mainScreen.width(), 2*_mainScreen.height())
-    , _viewport(_gameMap, _mainScreen.width(), _mainScreen.height()
-    , _player(_gameMap.width()/2, _gameMap.height()/2)
-    , _gameEnd(false);
+GameWorld::GameWorld(Screen main)
+    : _gameMap(960, 1280, 0, 0)
+    , _viewport(_gameMap, 480, 640, 0, 0)
+    , _player(240, 320)
+    , _gameEnd(false)
 {
-
+    _mainScreen = main;
+    int input = getch();
+    gameLoop(input);
 }
 
-void handleKey(int input)
+void GameWorld::handleKey(int input)
 {
     //TODO;
 }
 
-void gameLoop(int input)
+void GameWorld::gameLoop(int input)
 {
     if ((input == 'q') || (input == 'Q')) return;
 
-    _gameMap.draw(mainChar);
-    _viewport.center(mainChar);
+    _gameMap.draw(_player.y(), _player.x(), _player.symbol());
+    _viewport.center(_player.y(), _player.x());
     _viewport.refresh();
 
     while (!_gameEnd)
@@ -31,7 +34,7 @@ void gameLoop(int input)
 
 int main()
 {
-    _mainScreen.print("Start game with any button.\nQ or q to quit.");
-    int input = getch();
-    gameLoop(input);
+    Screen scr;
+    scr.print("Start game with any button.\nQ or q to quit.");
+    new GameWorld(scr);
 }
