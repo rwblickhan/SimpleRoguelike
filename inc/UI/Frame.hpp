@@ -12,20 +12,18 @@ class Frame {
 private:
     int _height, _width;
     int _y, _x;
+    WINDOW* _pWindow;
+    WINDOW* _pSuper;
     bool _hasSuper;
-    WINDOW* _window;
-    WINDOW* _super;
 
 public:
     Frame(int rows, int cols, int row_0, int col_0);
-    Frame(WINDOW*& super, int rows, int cols, int row_0, int col_0);
+    Frame(Frame& super, int rows, int cols, int row_0, int col_0);
     ~Frame();
 
     //getters
     int height();
     int width();
-    int row();
-    int col();
     WINDOW* window();
     WINDOW* superWindow();
 
@@ -34,6 +32,7 @@ public:
     void refresh();
     void move(int row, int col);
     void fillWindow();
+    void center(int x, int y);
 };
 
 #endif
