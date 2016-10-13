@@ -9,13 +9,12 @@
 class GameWorld
 {
 public:
-    GameWorld(Screen main);
+    GameWorld();
     ~GameWorld();
     void handleKey(int input);
     void gameLoop(int input);
     static int main();
 private:
-    Screen _mainScreen;
     Frame _gameMap;
     Frame _viewport;
     PlayerCharacter _player;

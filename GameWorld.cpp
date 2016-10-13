@@ -1,15 +1,13 @@
 #include "inc/GameWorld.hpp"
 #include "inc/GameObject/GameObject.hpp"
 
-GameWorld::GameWorld(Screen main)
+GameWorld::GameWorld()
     : _gameMap(960, 1280, 0, 0)
     , _viewport(_gameMap, 480, 640, 0, 0)
     , _player(240, 320)
     , _gameEnd(false)
 {
-    _mainScreen = main;
-    int input = getch();
-    gameLoop(input);
+
 }
 
 void GameWorld::handleKey(int input)
@@ -34,7 +32,16 @@ void GameWorld::gameLoop(int input)
 
 int main()
 {
-    Screen scr;
-    scr.print("Start game with any button.\nQ or q to quit.");
-    new GameWorld(scr);
+    initscr();
+    clear();
+    noecho();
+    cbreak();
+    keypad(stdscr, true);
+    curs_set(0);
+    getmaxyx(stdscr, _height, _width);
+    printw("Start game with any button.\nQ or q to quit.");
+    GameWorld world = new GameWorld();
+    int input = getch();
+    world.gameLoop(input);
+    endwin();
 }
