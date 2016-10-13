@@ -29,10 +29,8 @@ public:
     WINDOW* window();
     WINDOW* superWindow();
 
-    void draw(GameObject &o);
-    void draw(GameObject &o, int row, int col);
-    void erase(GameObject &o);
-    void center(GameObject &o);
+    void draw(int x, int y, char c);
+    void erase(int x, int y, char c);
     void refresh();
     void move(int row, int col);
     void fillWindow();

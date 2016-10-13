@@ -29,23 +29,14 @@ Frame::~Frame()
     delwin(_window);
 }
 
-void Frame::draw(GameObject& o)
+void Frame::draw(int x, int y, char c)
 {
-    mvwaddch(_window, o.y(), o.x(), o.symbol());
+    mvwaddch(_window, y, x, c);
 }
 
-void Frame::draw(GameObject& o, int x, int y)
+void Frame::erase(int x, int y, char c)
 {
-    //TODO
-}
-
-void Frame::erase(GameObject& o)
-{
-    mvwaddch(_window, o.y(), o.x(), ' ');
-}
-void Frame::center(GameObject &o)
-{
-    //TODO
+    mvwaddch(_window, y, x, c);
 }
 
 void Frame::refresh()
@@ -67,5 +58,5 @@ void Frame::move(int x, int y)
 
 void Frame::fillWindow()
 {
-
+    //TODO: implement
 }
