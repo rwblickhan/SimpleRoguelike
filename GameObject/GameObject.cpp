@@ -23,35 +23,32 @@ GameObject::~GameObject()
 
 }
 
-char symbol()
+char GameObject::symbol()
 {
-    //return _symbol;
-    return ' ';
+    return _symbol;
 }
 
-int x()
+int GameObject::x()
 {
-    //return _x;
-    return 1;
+    return _x;
 }
 
-int y()
+int GameObject::y()
 {
-    //return _y;
-    return 1;
+    return _y;
 }
 
-void symbol(char s)
+void GameObject::symbol(char s)
 {
-    //_symbol = s;
+    _symbol = s;
 }
 
-void x(int x)
+void GameObject::x(int x)
 {
-    //_x = x;
+    _x = x;
 }
 
-void y(int y)
+void GameObject::y(int y)
 {
-    //_y = y;
+    _y = y;
 }
